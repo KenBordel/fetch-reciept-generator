@@ -118,4 +118,8 @@ reciept.drawRightString(125, 100, f"Total: {total}")
 
 reciept.setFont('MerchantCopy', 18)
 reciept.drawString(10, 70, f"Thank you for shopping at {storename}!")
+
+reciept.setFont('MerchantCopy', 14)
+reciept.drawString(10, 50, f"ST# 01925 OP# 000069 TE# 09 TR# 07776")
+
 reciept.save()
