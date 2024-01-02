@@ -104,9 +104,7 @@ if float(item3price) != 0 and float(item3qty) != 0:
 receipt.setFont('MerchantCopy', 16)
 receipt.drawRightString(125, 210, f"Subtotal: {subtotal:.2f}")
 receipt.drawRightString(125, 190, f"Tax: {roundtax:.2f}")
-cash_amount = total + float(extramoney)
 receipt.drawRightString(125, 170, f"Cash: {cash_amount:.2f}")
-change_amount = cash_amount - total
 receipt.drawRightString(125, 150, f"Change: {change_amount:.2f}")
 
 receipt.setFont('MerchantCopy', 20)
