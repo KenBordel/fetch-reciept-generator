@@ -69,7 +69,7 @@ item6qty = input("Enter how much of this item you want to buy: ")
 item6price = input("Enter the price of your sixth item in this format '11.11': ")
 
 #barcode
-barid = random.randrange(0000000000000, 9999999999999)
+barid = random.randrange(00000000000000, 99999999999999)
 
 tax = (float(item1price) * float(item1qty) + float(item2price) * float(item2qty) + float(item3price) * float(item3qty) + float(item4price) * float(item4qty) + float(item5price) * float(item5qty) + float(item6price) * float(item6qty)) * float(salestax)  
 roundtax = round(tax, 2)
