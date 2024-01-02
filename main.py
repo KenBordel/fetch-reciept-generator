@@ -56,12 +56,24 @@ item3name = input("Enter the name of your third product: ")
 item3qty = input("Enter how much of this item you want to buy: ")
 item3price = input("Enter the price of your third item in this format '11.11': ")
 
+item4name = input("Enter the name of your third product: ")
+item4qty = input("Enter how much of this item you want to buy: ")
+item4price = input("Enter the price of your third item in this format '11.11': ")
+
+item5name = input("Enter the name of your third product: ")
+item5qty = input("Enter how much of this item you want to buy: ")
+item5price = input("Enter the price of your third item in this format '11.11': ")
+
+item6name = input("Enter the name of your third product: ")
+item6qty = input("Enter how much of this item you want to buy: ")
+item6price = input("Enter the price of your third item in this format '11.11': ")
+
 #barcode
 barid = random.randrange(0000000000000, 9999999999999)
 
-tax = (float(item1price) * float(item1qty) + float(item2price) * float(item2qty) + float(item3price) * float(item3qty)) * float(salestax)
+tax = (float(item1price) * float(item1qty) + float(item2price) * float(item2qty) + float(item3price) * float(item3qty) + float(item4price) * float(item4qty) + float(item5price) * float(item5qty) + float(item6price) * float(item6qty)) * float(salestax)  
 roundtax = round(tax, 2)
-result = float(item1price) * float(item1qty) + float(item2price) * float(item2qty) + float(item3price) * float(item3qty) + tax
+result = float(item1price) * float(item1qty) + float(item2price) * float(item2qty) + float(item3price) * float(item3qty) + float(item4price) * float(item4qty) + float(item5price) * float(item5qty) + float(item6price) * float(item6qty) + tax
 total = round(result, 2)
 print(total)
 
@@ -104,9 +116,18 @@ if (float(item3price) != 0 and float(item2qty) != 0):
 if (float(item3price) != 0 and float(item3qty) != 0):
     reciept.drawString(20, 260, f"{item3qty}   {item3name}: ${item3price}")
 
+if (float(item4price) != 0 and float(item4qty) != 0):
+    reciept.drawString(20, 300, f"{item4qty}   {item4name}: ${item4price}")
+
+if (float(item5price) != 0 and float(item5qty) != 0):
+    reciept.drawString(20, 280, f"{item5qty}   {item5name}: ${item5price}")
+
+if (float(item6price) != 0 and float(item6qty) != 0):
+    reciept.drawString(20, 260, f"{item6qty}   {item6name}: ${item6price}")
+
 
 reciept.setFont('MerchantCopy', 16)
-reciept.drawRightString(125, 210, f"Subtotal: {round(float(item1price) * float(item1qty) + float(item2price) * float(item2qty) + float(item3price) * float(item3qty), 2)}")
+reciept.drawRightString(125, 210, f"Subtotal: {round(float(item1price) * float(item1qty) + float(item2price) * float(item2qty) + float(item3price) * float(item3qty) + float(item4price) * float(item4qty) + float(item5price) * float(item5qty) + float(item6price) * float(item6qty), 2)}")
 reciept.drawRightString(125, 190, f"Tax: {roundtax:.2f}")
 reciept.drawRightString(125, 170, f"Cash: {round(total + float(extramoney), 2):.2f}")
 reciept.drawRightString(125, 150, f"Change: {round((total + float(extramoney)) - total, 2):.2f}")
