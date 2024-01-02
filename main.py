@@ -56,17 +56,17 @@ item3name = input("Enter the name of your third product: ")
 item3qty = input("Enter how much of this item you want to buy: ")
 item3price = input("Enter the price of your third item in this format '11.11': ")
 
-item4name = input("Enter the name of your third product: ")
+item4name = input("Enter the name of your fourth product: ")
 item4qty = input("Enter how much of this item you want to buy: ")
-item4price = input("Enter the price of your third item in this format '11.11': ")
+item4price = input("Enter the price of your fourth item in this format '11.11': ")
 
-item5name = input("Enter the name of your third product: ")
+item5name = input("Enter the name of your fifth product: ")
 item5qty = input("Enter how much of this item you want to buy: ")
-item5price = input("Enter the price of your third item in this format '11.11': ")
+item5price = input("Enter the price of your fifth item in this format '11.11': ")
 
-item6name = input("Enter the name of your third product: ")
+item6name = input("Enter the name of your sixth product: ")
 item6qty = input("Enter how much of this item you want to buy: ")
-item6price = input("Enter the price of your third item in this format '11.11': ")
+item6price = input("Enter the price of your sixth item in this format '11.11': ")
 
 #barcode
 barid = random.randrange(0000000000000, 9999999999999)
@@ -110,20 +110,20 @@ reciept.setFont('MerchantCopy', 14)
 if (float(item1price) != 0 and float(item1qty) != 0):
     reciept.drawString(20, 300, f"{item1qty}   {item1name}: ${item1price}")
 
-if (float(item3price) != 0 and float(item2qty) != 0):
-    reciept.drawString(20, 280, f"{item2qty}   {item2name}: ${item2price}")
+if (float(item2price) != 0 and float(item2qty) != 0):
+    reciept.drawString(20, 290, f"{item2qty}   {item2name}: ${item2price}")
 
 if (float(item3price) != 0 and float(item3qty) != 0):
-    reciept.drawString(20, 260, f"{item3qty}   {item3name}: ${item3price}")
+    reciept.drawString(20, 280, f"{item3qty}   {item3name}: ${item3price}")
 
 if (float(item4price) != 0 and float(item4qty) != 0):
-    reciept.drawString(20, 300, f"{item4qty}   {item4name}: ${item4price}")
+    reciept.drawString(20, 270, f"{item4qty}   {item4name}: ${item4price}")
 
 if (float(item5price) != 0 and float(item5qty) != 0):
-    reciept.drawString(20, 280, f"{item5qty}   {item5name}: ${item5price}")
+    reciept.drawString(20, 260, f"{item5qty}   {item5name}: ${item5price}")
 
 if (float(item6price) != 0 and float(item6qty) != 0):
-    reciept.drawString(20, 260, f"{item6qty}   {item6name}: ${item6price}")
+    reciept.drawString(20, 250, f"{item6qty}   {item6name}: ${item6price}")
 
 
 reciept.setFont('MerchantCopy', 16)
