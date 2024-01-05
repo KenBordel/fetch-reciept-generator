@@ -15,7 +15,7 @@ reciept = canvas.Canvas(f'output/{filename}', pagesize = (250, 445))
 
 ##   Customize reciepts   ##
 print("Fetch Reciept Generator")
-print("Created by BengaliTech")
+print("Created by KenBordel")
 print("""This program is meant to be used to generate custom reciepts as pdf files to be
 scanned into the Fetch Rewards app. The purpose is to make the items reflect the 
 current promotions that are going on to provide you maximium points \n \n""")
